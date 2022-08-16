@@ -202,9 +202,20 @@ button:hover{
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+.cart--footer{
   position: absolute;
   bottom: 50px;
   right: 50px;
+}
+
+.purchase--cart{
+  padding: 15px 20px;
+  background-color: rgb(33, 59, 225);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
 }
 
 .no--data{

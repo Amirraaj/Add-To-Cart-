@@ -78,15 +78,15 @@ const displayCard =(data) =>{
 }
 
 function noCart(){
-  const display = document.createElement("div")
+  const display = document.createElement("h1")
   display.classList.add("no--data")
-  display.innerHTML = `No data available`
+  display.innerHTML = `No items available`;
   cartBox.appendChild(display)
 }
 // function to render the cart list
 const displayCart = (data) =>{
-  cartBox.innerHTML = "";
   !data ? noCart() :
+  cartBox.innerHTML = "";
   data.forEach(
     (items) =>{
       const cart = document.createElement("div")
@@ -107,10 +107,11 @@ const displayCart = (data) =>{
 }
 // function to add data to cart
 function addToCart(id){
-  const itemDetails = productDetails.map((item) => {
-    item.id == id ? cartDetails.push(item) : item ;
-  })
-  displayCart(cartDetails);
+    const itemDetails = productDetails.map((item) => {
+      item.id == id ? cartDetails.push(item) : item ;
+    })
+    displayCart(cartDetails);
+  
 }
 // function to add quantity
 function increaseQuantiy (id, qty){
@@ -149,9 +150,6 @@ function deleteItems(id){
 
 }
 
-
-
-
 //Toggel for the cart
 const navToggle = document.querySelector(".nav-toggle")
 
@@ -167,3 +165,5 @@ clearCart.addEventListener('click',() =>{
 
 // function call for the rendering the products
 displayCard(productDetails);
+displayCart(cartDetails);
+
